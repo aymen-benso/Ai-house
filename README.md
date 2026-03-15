@@ -12,6 +12,187 @@ A modern, responsive web application for AI House - a community platform dedicat
 - **Contact Forms** and dialog-based user interactions
 - **Performance Optimized** with Vite for fast development and builds
 
+## Team Collaboration Guide
+
+This section is for **Frontend Development Team** members working on this project.
+
+### Team Members
+
+- **Abderaouf Ghezal** - Frontend Developer
+- **Abderaouf Elorabi** - Frontend Developer
+- **Mohamed** - Frontend Developer
+
+### Git Workflow
+
+We use **Git Flow** branching strategy:
+
+```
+main        → Production-ready code
+  ↑
+develop     → Integration branch for features
+  ↑
+feature/*   → Individual feature branches
+hotfix/*    → Emergency production fixes
+```
+
+### Branch Naming Convention
+
+| Branch Type | Pattern | Example |
+|-------------|---------|---------|
+| Feature | `feature/description` | `feature/hero-section` |
+| Bugfix | `fix/bug-description` | `fix/navbar-responsive` |
+| Hotfix | `hotfix/critical-fix` | `hotfix/api-connection` |
+
+### Commit Message Convention
+
+Use format: `<type>: <description>`
+
+| Type | Description | Example |
+|------|-------------|---------|
+| `feat` | New feature | `feat: add events page` |
+| `fix` | Bug fix | `fix: correct mobile navigation` |
+| `docs` | Documentation | `docs: update component usage` |
+| `refactor` | Code refactoring | `refactor: simplify button component` |
+| `style` | UI/styling changes | `style: update color palette` |
+| `chore` | Maintenance | `chore: update dependencies` |
+
+### Development Workflow
+
+1. **Before starting work:**
+   ```bash
+   git checkout develop
+   git pull origin develop
+   git checkout -b feature/your-feature-name
+   ```
+
+2. **During development:**
+   - Write clean, typed code with TypeScript
+   - Follow existing component patterns
+   - Use shadcn/ui components when possible
+   - Test your changes locally (responsive, dark/light mode)
+   - Commit frequently with clear messages
+
+3. **Before pushing:**
+   ```bash
+   npm run lint          # Check code style
+   npm run build         # Verify build succeeds
+   ```
+
+4. **Create Pull Request:**
+   - Push branch: `git push origin feature/your-feature-name`
+   - Open PR to `develop` branch
+   - Add meaningful title and description
+   - Link related issues
+   - Request review from 1-2 team members
+
+### Code Review Checklist
+
+**For Authors:**
+- [ ] Self-review completed
+- [ ] No console.logs left
+- [ ] Responsive design tested
+- [ ] Dark/light mode tested
+- [ ] Component properly typed
+
+**For Reviewers:**
+- [ ] Code logic is correct
+- [ ] UI/UX consistency checked
+- [ ] Performance impact assessed
+- [ ] Variable names are clear
+- [ ] No duplicate code
+
+### Project Tasks Assignment
+
+**Frontend Completion Deadline: March 25, 2026**
+
+| Task | Assigned To | Description | Deadline | Status |
+|------|-------------|-------------|----------|--------|
+| **Landing Page & Hero Section** | Abderaouf Ghezal | Hero section, navbar, footer, main landing layout | March 22 | Not Started |
+| **Events & Team Pages** | Abderaouf Elorabi | Events listing, event details, team members display | March 22 | Not Started |
+| **Contact, Testimonials & UI Polish** | Mohamed | Contact forms, testimonials section, animations, responsive fixes | March 22 | Not Started |
+| **API Integration** | All | Connect frontend to backend APIs, error handling | March 25 | Not Started |
+| **Final Testing & Optimization** | All | Cross-browser testing, performance optimization, bug fixes | March 25 | Not Started |
+
+---
+
+#### Abderaouf Ghezal - Landing Page & Hero Section
+- [ ] Create Hero section with call-to-action
+- [ ] Build responsive Navigation component
+- [ ] Create Footer with links and social icons
+- [ ] Implement scroll-based navbar styling
+- [ ] Add smooth scroll animations
+- [ ] Ensure mobile responsiveness
+- [ ] **Deadline: March 22, 2026**
+
+#### Abderaouf Elorabi - Events & Team Pages
+- [ ] Create Events listing page
+- [ ] Build Event detail/card component
+- [ ] Implement Event registration modal/form
+- [ ] Create Team members display section
+- [ ] Add filtering for events (upcoming/past)
+- [ ] Test responsive layout on all devices
+- [ ] **Deadline: March 22, 2026**
+
+#### Mohamed - Contact, Testimonials & UI Polish
+- [ ] Create Contact form with validation
+- [ ] Build Testimonials section/carousel
+- [ ] Implement form submission handling
+- [ ] Add page transition animations
+- [ ] Polish responsive design (mobile, tablet, desktop)
+- [ ] Fix any UI inconsistencies
+- [ ] **Deadline: March 22, 2026**
+
+---
+
+### Daily Check-ins
+
+**Standup Time:** 9:00 PM daily
+
+**Format:**
+1. What did you complete today?
+2. What are you working on tomorrow?
+3. Any blockers?
+
+### Work Distribution Rules
+
+- Each member works on their assigned module in a separate branch
+- Branch naming: `feature/abderaouf-ghezal-hero`, `feature/abderaouf-elorabi-events`, `feature/mohamed-contact`
+- Create PR to `develop` branch when module is complete
+- All PRs must be reviewed by at least 1 other member
+- Merge only after approval and build passes
+
+### Communication
+
+- **Daily standups:** Check progress and blockers
+- **Discord/Slack:** Quick questions and updates
+- **GitHub Issues:** Track bugs and feature requests
+- **PR Comments:** Code-specific discussions
+
+### Environment Setup (Team)
+
+Each team member should:
+
+1. Clone the repo
+2. Copy `.env.example` to `.env` (if exists)
+3. Use **different ports** if working on same machine:
+   ```bash
+   npm run dev -- --port 5173  # Member 1
+   npm run dev -- --port 5174  # Member 2
+   ```
+4. Never commit `.env` or `node_modules`
+5. Always pull `develop` before creating new branches
+
+### Component Guidelines
+
+When creating new components:
+- Place in `src/components/` or `src/sections/`
+- Use TypeScript for type safety
+- Follow shadcn/ui patterns when possible
+- Export from index files for clean imports
+- Document props with JSDoc comments
+
+---
+
 ## 🛠️ Tech Stack
 
 ### Core Technologies
